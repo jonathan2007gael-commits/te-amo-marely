@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Te Amo Marely</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .heart {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            background: #e60026;
+            transform: rotate(-45deg);
+            animation: beat 1.2s infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background: #e60026;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -80px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 80px;
+            top: 0;
+        }
+
+        @keyframes beat {
+            0% { transform: rotate(-45deg) scale(1); }
+            25% { transform: rotate(-45deg) scale(1.1); }
+            50% { transform: rotate(-45deg) scale(1); }
+            75% { transform: rotate(-45deg) scale(1.15); }
+            100% { transform: rotate(-45deg) scale(1); }
+        }
+
+        .name {
+            position: absolute;
+            transform: rotate(45deg);
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .text {
+            margin-top: 35px;
+            font-size: 34px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart">
+        <div class="name">Marely</div>
+    </div>
+
+    <div class="text">Te amo</div>
+
+</body>
+</html>
